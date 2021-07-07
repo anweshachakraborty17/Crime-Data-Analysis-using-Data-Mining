@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>AIR-Crime Analyzer</title>
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Allura|Josefin+Sans');
+
+*{
+	margin: 0;
+	padding: 0;
+	/*box-sizing: border-box;*/
+	outline: none;
+	list-style: none;
+	text-decoration: none;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+h1.title{
+	margin-bottom: 20px;
+	color: #444444;
+	font-family: 'Allura', cursive;
+	text-transform: uppercase;
+	font-size: 38px;
+	word-spacing: 25px;
+	letter-spacing: 5px;
+}
+
+p{
+	margin-bottom: 15px;
+	font-size: 20px;
+	line-height: 20px;
+	color: #e0ebeb;
+	justify-content: justify;
+}
+h5{
+	margin-bottom: 15px;
+	font-size: 14px;
+	line-height: 20px;
+	color: #5c8a8a;
+	justify-content: justify;
+}
+
+.btn a {
+    width: 180px;
+    height: 35px;
+    line-height: 35px;
+    border: 2px solid #fb2274;
+    color: #fb2274;
+    display: block;
+    margin: 25px auto 0;
+    text-align: center;
+}
+
+.main_container{
+	position: relative;
+}
+
+
+/* Navigation Bar */
+.navbar{
+	width: 100%;
+	height: 65px;
+	position: absolute;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.logo a{
+	font-family: 'Allura', cursive;
+	font-size: 36px;
+	color: #80ffff;
+}
+
+.navbar_items ul{
+	display: flex;
+}
+
+.navbar_items ul li{
+	margin: 0 10px;
+}
+
+.navbar_items ul li a{
+	text-transform: uppercase;
+	color: #fff;
+}
+
+
+/* banner_image */
+/*.banner_image{
+    height: 100%;
+    width: 100%;
+    background-image:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url('images/police-2.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}*/
+.banner_image{
+	/*background: url('images/police-2.jpg') no-repeat top center;*/
+	background-image:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url("https://www.gi-de.com/files/_processed_/0/3/csm_GiDe_Header_Customer_Service_Digitalization_1af680b9ed.jpg");
+	background-size: cover;
+	width: 100%;
+	height: 700px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.banner_content{
+	text-align: center;
+	color: #fff;
+}
+
+.banner_content h1{
+	text-transform: uppercase;
+	line-height: 38px;
+	margin-bottom: 15px;
+}
+
+.banner_content h1 span{
+	color: #ffff00;
+}
+
+
+/* About */
+.about,
+.services,
+.contactus,
+.ourteam{
+	text-align: center;
+	padding: 5% 10%;
+}
+
+/* Services */
+.services{
+	background-color: #c6d9ec;
+}
+
+.diff_services {
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.diff_services .diff_services_item {
+    width: 30%;
+}
+
+.diff_services .diff_services_item img {
+    width: 100%;
+    margin-bottom: 25px;
+    transition: all 0.5s ease;
+}
+.diff_services .diff_services_item img:hover {
+transform: scale(1.1);
+}
+.diff_services .diff_services_item h2 {
+    color: #00004d;
+    margin-bottom: 15px;
+}
+.diff_services .diff_services_item p{
+    color: #00264d;
+    margin-bottom: 15px;
+    justify-content: center;
+}
+/* Contact us */
+.form_wrapper .form_input{
+	margin-bottom: 15px;
+}
+
+.form_wrapper .form_input input[type="text"]{
+	width: 250px;
+	padding: 12px 20px; 
+	border: 1px solid #ccc;
+}
+
+.form_wrapper .form_input textarea{
+	width: 250px;
+	padding: 12px 20px; 
+	height: 80px;
+	resize: none;
+	border: 1px solid  #ccc;
+}
+/* our team */
+/*.ourteam{
+	background: #f5f5f5;
+}
+
+.ourteam_wrapper{
+	display: flex;
+	flex-direction: column;
+}
+
+.ourteam_wrapper .team{
+	display: flex;
+	justify-content: space-between;
+}
+
+.ourteam_wrapper .team-1.team{
+	margin-bottom: 25px;
+}
+
+.ourteam_wrapper .team_members{
+	width: 30%;
+	height: auto;
+	cursor: pointer;
+	overflow: hidden;
+	position: relative;
+}
+
+.ourteam_wrapper .team_members img{
+	display: block;
+	width: 100%;
+	height: auto;
+	transition: all 0.5s ease;
+}
+
+.ourteam_wrapper .team_members:hover img{
+	transform: scale(1.1);
+}
+*/
+/* footer */
+.footer{
+	width: 100%;
+	text-align: center;
+	background: #444444;
+	padding: 20px 0;
+}
+
+.footer a{
+	color: #fff;
+}
+
+
+
+@media (max-width: 720px){
+
+	.navbar{
+		height: auto;
+		flex-direction: column;
+	}
+
+	.logo{
+		margin-bottom: 25px;
+	}
+
+	.navbar_items ul{
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.navbar_items ul li{
+		margin-bottom:5px;
+	}
+
+	.banner_content{
+		margin-top: 35px;
+	}
+
+}
+
+
+/* arrow */
+.arrow{
+	position: fixed;
+	bottom: 25px;
+	right: 25px;
+	width: 40px;
+	height: 40px;
+	line-height: 50px;
+	text-align: center;
+	cursor: pointer;
+	background: #fb2274;
+	border-radius: 50%;
+	display: none;
+}
+
+.arrow img{
+	width: 20px;
+	height: 20px;
+	z-index: 1;
+}
+	</style>
+</head>
+<body>
+
+<div class="main_container" id="home">
+	
+	<div class="navbar">
+		<div class="logo">
+			<a href="#">AIR>> Crime Analyzer</a>
+		</div>
+		<div class="navbar_items">
+			<ul><li><a href="#">HOME</a></li>
+				<li><a href="analysis_home.html">CASE ANALYSIS</a></li>
+				<li><a href="reports_home.html">CASE REPORTS</a></li>
+				<li><a href="#contactus">CONTACT</a></li>
+				<li><a href="admin_login.html">ADMIN</a></li>
+				<li><a href="police_login.html">LOGOUT</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="banner_image">
+		<div class="banner_content">
+			<h1>KEEPING OUR COUNTRY SAFE &<br> <span>SECURE THROUGH DATA<span></h1>
+			<p>Indian Crime Data Analysis. A detail analysis and visualization of the crimes committed.</p>
+		</div>	
+	</div>
+
+	<div class="about" id="about">
+		<h1 class="title">About Us</h1>
+		<h5>AIR Crime Analyzer is a Crime Data Analysis Project using Data Mining Technics. Crime analyses is one among the important application of knowledge mining. Crime Analyzer is a law enforcement function that involves systematic analysis for identifying and analyzing patterns and trends in crime and disorder. 
+		Data processing contains many tasks and techniques including Classification, Association, Clustering, Prediction each of them has its own importance and applications It can help the analysts to spot crimes faster and help to form faster decisions.
+        The main objective of crime analysis is to seek out the meaningful information from great deal of knowledge and disseminates this information to officers and investigators within the field to help in their efforts to apprehend criminals and suppress criminal activity. In this project, Kmeans Clustering is employed for crime data analysis.</h5>
+	</div>
+<div class="services" id="services">
+		<h1 class="title">Services</h1>
+		<p></p>
+		<div class="diff_services">
+			<div class="diff_services_item">
+				<img src="case_u.png">
+				<h2 class="sub_title">Case Updates</h2>
+				<p>Officers can view all the latest case Updates and add any available current cases to keep updating the registry.</p>
+			</div>
+			<div class="diff_services_item">
+				<img src="case_a.jpg">
+				<h2 class="sub_title">Case Analysis</h2>
+				<p>Officers can make uses of Machine learning algorithm for data analysis to make accurate predictions that can very much help them to solve cases.</p>
+			</div>
+			<div class="diff_services_item">
+				<img src="case_s.jpg">
+				<h2 class="sub_title">Solve Cases</h2>
+				<p>Acquire the knowledge of the case through updates and combine it with analytics to quickly solve cases and reduce crime rate.</p>
+			</div>
+			
+		</div>
+	</div>
+
+	<div class="contactus" id="contactus">
+		<h1 class="title">contact us</h1>
+		<div class="form_wrapper">
+			<div class="form_input">
+				<input type="text" placeholder="Email">
+			</div>
+			<div class="form_input">
+				<input type="text" placeholder="Subject">
+			</div>
+			<div class="form_input">
+				<textarea placeholder="Message"></textarea>
+			</div>
+			<div class="btn">
+				<a href="#">Submit</a>
+			</div>
+		</div>
+	</div>
+
+<div class="footer">
+		<a href="#">© Anwesha-Ishika-Rohan 2021</a>
+	</div>
+
+
+	<div class="arrow">
+		<a href="#home"><img src="images/arrow.png" alt="up_arrow"></a>
+	</div>
+</div>	
+	
+</body>
+</html>

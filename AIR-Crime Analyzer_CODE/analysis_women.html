@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>AIR-Crime Analyzer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="nav.css">
+  <link= rel="stylesheet" href="chart_css.css" >
+  <!-- chart 1 -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawVisualization);
+
+      function drawVisualization() {
+        // Some raw data (not necessarily accurate)
+        var data = google.visualization.arrayToDataTable([
+          ['Month', 'Dowry Deaths', 'Witchcraft related mudders', 'Honor Killing', 'Female infanticide and sex-selective abortion', 'Bride burning','Average'],
+          ['2016-2017',  172,      38,         22,             98,           250,      116],
+          ['2017-2018',  383,      120,        99,             268,          288,      231.6],
+          ['2018-2019',  391,      167,        87,             207,           397,      249.8],
+          ['2019-2020',  618,      110,        115,             168,           215,      245.2],
+          ['2020-2021',  233,      91,         129,             226,          266,      189]
+        ]);
+
+        var options = {
+          title : 'CATEGORY 1: Mudder violence against women in India',
+          vAxis: {title: 'Number of crime reported'},
+          hAxis: {title: 'Year'},
+          seriesType: 'bars',
+          series: {5: {type: 'line'}}
+        };
+
+        var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+    <!-- chart 2 -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Rape', 'Marital Rape', 'Insult to modesty', 'Human trafficking and forced prostitution'],
+          ['2016',  7206,      1400,     1570,    434],
+          ['2017',  7923,      1860,     2173,    563],
+          ['2018',  8707,      2120,     4589,    579],
+          ['2019',  6735,      3540,     2735,    470],
+          ['2020',  5651,      2170,     3685,    924]
+        ]);
+
+        var options = {
+          title: 'CATEGORY 2: Sexual crimes against women in India',
+          vAxis: {title: 'Number of crime reported'},
+          hAxis: {title: 'Year'},
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+    <!-- chart 3 -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Crime', 'Rate of crime'],
+          ['Domestic violence',  10],
+          ['Forced & child marriage',  2],
+          ['Acid throwing',  6],
+          ['Abduction', 7],
+          ['Perpetuation',  4]
+        ]);
+
+        var options = {
+          title: 'CATEGORY 3: Other major crimes against women in India',
+          pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+    </script>
+
+</head>
+<body>
+	<!-- code-->
+<center>
+<div id="chart_div" style="width: 1200px; height: 800px;"></div>
+<div id="curve_chart" style="width: 1100px; height: 700px"></div>
+<div id="donutchart" style="width: 1200px; height: 800px;"></div>
+</center>
+<div class="navbar">
+		<div class="logo">
+			<a href="#">AIR>> Crime Analyzer</a>
+		</div>
+		<div class="navbar_items">
+			<ul>
+				<li><a href="index.html">LOGOUT</a></li>
+				<li><a href="admin_login.html">ADMIN</a></li>
+				<li><a href="home.html">CONTACT</a></li>
+				<li><a href="reports_home.html">CASE REPORTS</a></li>
+				<li><a href="analysis_home.html">CASE ANALYSIS</a></li>
+				<li><a href="home.html">HOME</a></li>
+			</ul>
+		</div>
+	</div>
+
+	</div>
+	</body>
+	</html>

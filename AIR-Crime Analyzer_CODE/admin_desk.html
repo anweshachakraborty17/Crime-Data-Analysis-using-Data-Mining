@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AIR-Crime Analyzer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="nav.css">
+<style>
+*{
+  padding:0;
+  margin:0;
+  /*box-sizing: border-box;*/
+}
+.column {
+  float: left;
+  width: 30%;
+  padding: 60px;
+
+}
+/* Remove extra left and right margins, due to padding */
+.row {
+  padding: 50px;
+  margin: 30px 30px;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-around;
+
+}
+
+.card {
+  box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.4);
+  max-width: 400px;
+  /*margin: auto;*/
+  text-align: center;
+  font-family: arial;
+  color: #2f0552;
+  background-color: #d1b3ff;
+  padding: 15px;
+  transition: all 0.5s ease;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  /*background-color: #000;*/
+  background: linear-gradient(to right, #4d004d,#000);
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+.card c1{
+  margin-right: 60px;
+  justify-content: center;
+}
+.card:hover{
+ transform: scale(1.2); 
+}
+</style>
+</head>
+
+<body background="https://www.crimesceneinvestigatoredu.org/wp-content/uploads/2018/01/fingerprint.jpg">
+ <div class="main_container" id="home"> 
+<div class="row">
+<div class="column">
+<div class="card c1">
+  <img src="https://images.idgesg.net/images/article/2018/10/supercomputer_servers_data_center_by_maxiphoto_getty_images_1200x800-100776400-large.jpg" style="width:100%"><br>
+  <h1><center>Manage<br>Database<br></center></h1><br>
+  <p><button onclick="location.href=''">Open</button></p>
+</div>
+</div>
+<div class="column">
+<div class="card c2">
+  <img src="system.jpg" style="width:100%"><br>
+  <h1><center>Manage<br>System<br></center></h1><br>
+  <p><button onclick="location.href='F:\Student PT\Data mining project'">View Details</button></p>
+</div>
+</div>
+</div>
+<div class="navbar">
+    <div class="logo">
+      <a href="#">AIR>> Crime Analyzer</a>
+    </div>
+    <div>
+      <ul>
+     <li>
+        <li><a href="admin_login.html">LOGOUT</a></li>
+        <li><a href="admin_desk.html">ADMIN DESK</a></li>
+        <li><a href="home_a.html">VIEW MESSAGES</a></li>
+        <li><a href="home_a.html">HOME</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AIR-Crime Analyzer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="nav.css">
+<style>
+*{
+  padding:0;
+  margin:0;
+  /*box-sizing: border-box;*/
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 50px;
+}
+/* Remove extra left and right margins, due to padding */
+.row {
+  padding: 50px;
+  margin: 30px 30px;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-around;
+
+}
+.card {
+  box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.4);
+  max-width: 400px;
+  /*margin: auto;*/
+  text-align: center;
+  font-family: arial;
+  color: #001a4d;
+  background-color: #b3b3ff;
+  padding: 15px;
+  transition: all 0.5s ease;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  /*background-color: #000;*/
+  background: linear-gradient(to right, #004d4d,#000);
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+.card:hover{
+ transform: scale(1.3); 
+}
+</style>
+</head>
+<body background="https://www.crimesceneinvestigatoredu.org/wp-content/uploads/2018/01/fingerprint.jpg">
+ <div class="main_container">
+<div class="banner_image">  
+<div class="row">
+<div class="column">
+<div class="card">
+  <img src="mojorcrime.jpg" style="width:100%"><br>
+  <h1>Major Crime Analysis</h1><br>
+  <p><button onclick="location.href='analysis_major.html'">View</button></p>
+</div>
+</div>
+<div class="column">
+<div class="card">
+  <img src="https://blog.wallix.com/hs-fs/hubfs/insider-threat-cyber-criminal-external-attack-psychology-privileged-user.jpg?width=498&name=insider-threat-cyber-criminal-external-attack-psychology-privileged-user.jpg" style="width:100%"><br>
+  <h1>Crime Against Women</h1><br>
+  <p><button onclick="location.href='analysis_women.html'">View</button></p>
+</div>
+</div>
+<div class="column">
+<div class="card">
+<img src="https://d31ezp3r8jwmks.cloudfront.net/24gmye38n6e9xy465lhwdckrcj9x" style="width:100%"><br>
+  <h1>Crime Against Child</h1><br>
+  <p><button onclick="location.href='analysis_child.html'">View</button></p>
+</div>
+</div>
+</div>
+</div>
+<div class="navbar">
+    <div class="logo">
+      <a href="#">AIR>> Crime Analyzer</a>
+    </div>
+    <div>
+      <ul>
+        <li><a href="police_login.html">LOGOUT</a></li>
+        <li><a href="admin_login.html">ADMIN</a></li>
+        <li><a href="home.html">CONTACT</a></li>
+        <li><a href="reports_home.html">CASE REPORTS</a></li>
+        <li><a href="analysis_home.html">CASE ANALYSIS</a></li>
+        <li><a href="home.html">HOME</a></li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+</html>
+

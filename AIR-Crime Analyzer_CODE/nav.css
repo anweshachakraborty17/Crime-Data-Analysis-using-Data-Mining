@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Allura|Josefin+Sans');
+*{  margin:0;
+	padding:0;
+}
+.navbar{
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+    background-color: #000000;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+}
+
+ul{
+	margin:0;
+	padding:0;
+	list-style: none;
+	height:36px;
+	line-height: 36px;
+	background-color: #000;
+	font-family: Arial, Helvetica,sans-serif;
+	font-size: 13px;
+
+}
+li{
+	float: right;
+	/*border-left:1px solid #156ee2;*/
+
+}
+a{
+	display: block;
+	padding: 0 28px;
+	color: #fff;
+	text-decoration: none;
+}
+a:hover{
+	background-color: #156ee2;
+}
+.active a{
+	background-color: #156ee2;
+}
+.logo a{
+    font-family: 'Allura', cursive;
+    font-size: 32px;
+    color: #80ffff;
+    position: absolute;
+}
+/*nav*/
+.main {
+  padding: 16px;
+  margin-top: 30px;
+  height: 1500px; 
+}

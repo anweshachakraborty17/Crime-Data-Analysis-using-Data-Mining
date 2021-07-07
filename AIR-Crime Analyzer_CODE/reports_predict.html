@@ -1,0 +1,199 @@
+<html>
+<title>AIR-Crime Analyzer</title>
+<head>
+     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal</title>
+    <link rel="stylesheet" href="nav.css">
+    <style>
+    	@import url('https://fonts.googleapis.com/css?family=Allura|Josefin+Sans');
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.banner_image{
+    height: 100%;
+    width: 100%;
+    background-image:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url("data_v1.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-box{
+    width:30%;
+    height:45%; 
+   position: relative;
+    margin: 10% auto;
+    background:  #ffffff;
+    padding: 5px;
+    overflow: hidden;
+    font-size: 24px;
+    /*font-color:#161a38;
+    border:10px;
+    border-color: #161a38;*/
+}
+.button-box{
+    width: 440px;
+    margin:20px auto;
+    position: relative;
+    /*box-shadow: 0 0 20px 9px #98bbeb;*/
+    border-radius: 30px;
+}
+.input-group{
+    top: 180px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+    padding: 10px 30px;
+    font-size: 24px;
+    justify-content: center;
+}
+.input-groupss{
+    top: 90px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+    justify-content: center;
+}
+.input-field{
+    width: 100%;
+    justify-content: center;
+    padding: 10px 10px;
+    margin: 10px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+    font-size: 18px;
+}
+.submit-btn{
+    width: 55%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: linear-gradient(to right, #52ccc8,#273acc);
+    border: 0;
+    outline: none;
+    border-radius: 60px;
+    font-size: 20px;
+    color: #ffffff;
+}
+.chech-box{
+    margin: 30px 10px 30px 0;
+}
+ span{
+    color: #000;
+    font-size: 12px;
+    bottom: 68px;
+    position: absolute;
+}
+h2{
+color:#161a38 ;    
+}
+
+    </style>
+</head>
+
+<body>
+
+<div class="main_container" id="home">
+
+	
+<div class="banner_image">	
+        <div class="form-box">
+        	<div class="button-box">
+                <div>
+                <h2><center>Crime Prediction Reports</center></h2></div>
+                </div>
+	     <form method="POST" action="crimeprediction_wb.html">
+		    <div>
+			 <select id="month" name="month" class="input-field" required>
+				<option value="Select a Month" selected>Select Location</option>
+				<option value="Andhra Pradesh">Andhra Pradesh</option>
+				<option value="Assam">Assam</option>
+				<option value="Bihar">Bihar</option>
+				<option value="Chhattisgarh">Chhattisgarh</option>
+				<option value="Delhi">Delhi</option>
+				<option value="Gujarat">Gujarat</option>
+				<option value="Goa">Goa</option>
+				<option value="Haryana">Haryana</option>
+				<option value="Himachal Pradesh">Himachal Pradesh</option>
+				<option value="ammu and Kashmir">ammu and Kashmir</option>
+				<option value="Jharkhand">Jharkhand</option>
+				<option value="Karnataka">Karnataka</option>
+				<option value="Kerala">Kerala</option>
+				<option value="Madhya Pradesh">Madhya Pradesh</option>
+				<option value="Maharashtra">Maharashtra</option>
+				<option value="Odisha">Odisha</option>
+				<option value="Punjab">Punjab</option>
+				<option value="Uttarkhand">Uttarkhand</option>
+				<option value="Rajasthan">Rajasthan</option>
+				<option value="Tamil Nadu">Tamil Nadu</option>
+				<option value="Telengana">Telengana</option>
+				<option value="Uttar Pradesh">Uttar Pradesh</option>
+				<option value="West Bengal">West Bengal</option>
+
+			</select>
+		</div>
+		<div>
+			<select id="month" name="month" class="input-field" required>
+				<option value="Select a Year" selected>Select Year</option>
+				<option value="2021">2021</option>
+				<option value="2022">2022</option>
+			</select>
+		</div>
+		<div>
+			<select id="month" name="month" class="input-field" required>
+				<option value="Select a Month" selected>Select Month</option>
+				<option value="January">January</option>
+				<option value="February">February</option>
+				<option value="March">March</option>
+				<option value="April">April</option>
+				<option value="May">May</option>
+				<option value="June">June</option>
+				<option value="July">July</option>
+				<option value="August">August</option>
+				<option value="September">September</option>
+				<option value="October">October</option>
+				<option value="November">November</option>
+				<option value="December">December</option>
+
+			</select>
+		</div>
+		<div>
+        <button type="submit" onclick="location.href='crimeprediction_wb.html'" class="submit-btn"> Submit </button>
+    </div>
+</form> 
+</div>
+<div class="navbar">
+	    <div class="logo">
+			<a href="#">AIR>> Crime Analyzer</a>
+		</div>
+		    <div class="navbar_items">
+			  <ul>
+				<li><a href="police_login.html">LOGOUT</a></li>
+        <li><a href="admin_login.html">ADMIN</a></li>
+        <li><a href="home.html">CONTACT</a></li>
+        <li><a href="reports_home.html">CASE REPORTS</a></li>
+        <li><a href="analysis_home.html">CASE ANALYSIS</a></li>
+        <li><a href="home.html">HOME</a></li>
+			  </ul>
+		    </div>
+	</div> 
+
+
+</body>
+</html>

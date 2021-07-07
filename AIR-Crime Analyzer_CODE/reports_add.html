@@ -1,0 +1,145 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="nav.css">  
+<style> 
+body{  
+  font-family: Calibri, Helvetica, sans-serif;  
+  background-color: #ffffff;  
+}  
+.container {  
+    padding:50px;
+    margin:0px;
+    margin-right:300px;
+    margin-left:300px;  
+    background-color: #d1e0e0;  
+}  
+  
+input[type=text], input[type=password], textarea {  
+  width: 100%;  
+  padding: 15px;  
+  margin: 5px 0 22px 0;  
+  display: inline-block;  
+  border: none;  
+  background: #ffffff;  
+}  
+input[type=text]:focus, input[type=password]:focus {  
+  background-color: #ffffb3;  
+  outline: groove;  
+}  
+hr {  
+  border: 3px solid #666699;  
+  margin-bottom: 25px;  
+}  
+.registerbtn {  
+  background-color: #2d5986;  
+  color: white;  
+  padding: 16px 20px;  
+  margin: 8px 0;  
+  border: none;  
+  cursor: pointer;  
+  width: 40%;  
+  opacity: 0.9;  
+}  
+.registerbtn:hover {  
+  opacity: 1;  
+}  
+</style>  
+</head>  
+<body> 
+  
+<form>  
+  <div class="container">  
+  <center>  <h1> Provide more information to be added to a Crime Report</h1> </center>  
+  <hr>  
+  <label><b> Victims First Name:</b> </label>   
+<input type="text" name="firstname" placeholder= "First Name" size="15" required />      
+<label><b> Victims Last Name:</b> </label>    
+<input type="text" name="lastname" placeholder="Last Name" size="15"required />   
+
+<div>  
+<label><b>   
+Victims Gender:</b>  
+</label><br>  
+<input type="radio" value="Male" name="gender" checked > Male   
+<input type="radio" value="Female" name="gender"> Female   
+<input type="radio" value="Other" name="gender"> Other  
+  
+</div>
+<br>  
+<label><b>   
+Contact Details:</b>  
+</label>  
+<input type="text" name="phone" placeholder="Phone No." size="10"/ required>   
+<b>Current Address:</b>  
+<textarea cols="80" rows="5" placeholder="Current Address" value="address" required>  
+</textarea>  
+ <label for="email"><b>Email:</b></label>  
+ <input type="text" placeholder="Enter Email" name="email" required>
+ <div>  
+<label>   
+<b>Type of Crime:</b>  
+</label>   
+  
+<select>  
+<option value="Select">Select</option>  
+<option value="Rape">Rape</option>  
+<option value="Dowry">Dowry</option>  
+<option value="Domestic violence">Domestic violence</option>  
+<option value="Illegal drug trade">Illegal drug trade</option>  
+<option value="Arms traffickingArms trafficking">Arms trafficking</option>  
+<option value="Poaching and wildlife trafficking">Poaching and wildlife trafficking</option>  
+<option value="Cyber crime">Cyber crime</option>  
+<option value="Corruption and police misconduct">Corruption and police misconduct</option>  
+<option value="Gunrunning">Gunrunning</option>  
+<option value="Money laundering">Money laundering</option>  
+<option value="Fraud">Fraud</option>  
+<option value="Extortion">Extortion</option>  
+<option value="Murder for hire">Murder for hire</option>  
+<option value="Murder">Murder</option>  
+<option value="Black marketing">Black marketing</option>  
+<option value="Religious violence">Religious violence</option>  
+<option value="Terrorism">Terrorism</option>  
+<option value="Abduction">Abduction</option>  
+<option value="Human trafficking">Human trafficking</option>  
+<option value="Computer hacking">Computer hacking</option> 
+<option value="Theft">Theft</option> 
+<option value="Burglary">Burglary</option> 
+<option value="Robbery">Robbery</option> 
+</select>  
+</div>
+<br> 
+<label for="date"><b>When did the incident happen?</b></label>  
+    <input type="date" placeholder="Crime registration date" name="date" required> 
+    <br><br>  
+ <label> <b>Where did the incident happen?</b> eg the street address(required)*</label> 
+<textarea cols="80" rows="5" placeholder="eg the street address(required)*" value="address" required> 
+</textarea>  
+<label><b>Details about the Crime:</b></label>  
+<textarea cols="80" rows="5" placeholder="Details" value="address" required>  
+</textarea>  
+    <label for="Police Station"><b>Police Station</b></label>  
+    <input type="text" placeholder="Crime reported police station" name="Police Station" required>  
+    <button type="submit" class="registerbtn"><b>Submit</b></button> 
+    </div>   
+</form>
+<!-- <div class="main_container"> -->
+<div class="navbar">
+    <div class="logo">
+      <a href="#">AIR>> Crime Analyzer</a>
+    </div>
+    <div>
+      <ul>
+        <li><a href="police_login.html">LOGOUT</a></li>
+        <li><a href="admin_login.html">ADMIN</a></li>
+        <li><a href="home.html">CONTACT</a></li>
+        <li><a href="reports_home.html">CASE REPORTS</a></li>
+        <li><a href="analysis_home.html">CASE ANALYSIS</a></li>
+        <li><a href="home.html">HOME</a></li>
+      </ul>
+    </div>
+  </div>
+<!-- </div>   -->
+</body>  
+</html>  

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>AIR-Crime Analyzer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="nav.css">
+  <link= rel="stylesheet" href="chart_css.css" >
+  <!-- chart 1 -->
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+  google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawVisualization);
+
+      function drawVisualization() {
+        // Some raw data (not necessarily accurate)
+        var data = google.visualization.arrayToDataTable([
+          ['Month', '2001-2010', '2011-2020', '% Change in 2020 over 2001'],
+          ['Total cog. crimes under IPC, per 100,000',  160.5,      162.3,         10.1],
+          ['Murder per 100,000',  20.61,      20.81,        70.39],
+          ['Kidnapping per 100,000',  10.40,      20.07,        47.80],
+          ['Robbery per 100,000',  20.24,      10.60,        28.85],
+          ['Burglary (known as house-breaking in India) per 100,000',  39.3,      70.92,         79.84]
+        ]);
+
+        var options = {
+          title : 'CATEGORY 1: Incidence of cognizable crimes in India (2001-2020)',
+          vAxis: {title: 'Number of crime reported'},
+          hAxis: {title: 'Crime'},
+          seriesType: 'bars',
+          series: {5: {type: 'line'}}
+        };
+
+        var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+  <!-- chart 2 -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Rape', 'Dowry', 'Domestic violence', 'Illegal drug trade','Arms trafficking', 'Poaching and wildlife trafficking', 'Cyber crime','Mudder', 'Kidnapping','Other crimes(Petty crime, Confidence tricks, Taxi scam etc.)'],
+          ['2016',  7206,      1400,     1570,    434, 1530, 120, 5540, 4378, 1240, 3013, ],
+          ['2017',  7923,      1860,     2173,    563, 1112, 221, 7092, 5321, 1412, 3712],
+          ['2018',  8707,      2120,     4589,    579, 1320, 630, 6123, 6045, 1370, 4256],
+          ['2019',  6735,      3540,     3735,    470, 2110, 720, 8631, 5247, 1890, 2184],
+          ['2020',  5651,      2170,     6685,    924, 1870, 327, 11350, 9105, 425,  1240]
+        ]);
+
+        var options = {
+          title: 'CATEGORY 2: Top 10 reported crime in India with respect to reported crime records',
+          vAxis: {title: 'Number_of_crime_reported'},
+          hAxis: {title: 'Year'},
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+    
+    <!--chart 3-->
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Type of Crime', 'Rate of Crime ( 2016-2020 )'],
+          ['Drug trafficking',     11],
+          ['Rape',      19],
+          ['Dowry',  14],
+          ['Domestic violence', 9],
+          ['Illegal drug trad',    7],
+          ['Arms trafficking',    6],
+          ['Poaching and wildlife trafficking',    4],
+          ['Corruption and police misconduct',    4],
+          ['Gunrunning',    7],
+          ['Money laundering',    4],
+          ['Fraud',    6],
+          ['Extortion',    7],
+          ['Murder',    17],
+          ['Black marketing',    5],
+          ['Religious violence',    12],
+          ['Terrorism',    8],
+          ['Abduction',    13],
+          ['Computer hacking',    15],
+          ['Theft',    11],
+          ['Burglary',    7],
+          ['Robbery',    7],
+          ['Human trafficking',    6],
+          ['Scams',    8],
+
+        ]);
+
+        var options = {
+          title: 'CATEGORY 3: Different types of crime committed in India( 2016-2020 )'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+
+</head>
+<body>
+	<!-- code-->
+<center>
+  <div id="chart_div" style="width: 1100px; height: 700px"></div>
+<div id="curve_chart" style="width: 1100px; height: 700px"></div>
+<div id="piechart" style="width: 1200px; height: 800px;"></div>
+</center>
+<div class="navbar">
+		<div class="logo">
+			<a href="#">AIR>> Crime Analyzer</a>
+		</div>
+		<div class="navbar_items">
+			<ul>
+				<li><a href="index.html">LOGOUT</a></li>
+				<li><a href="admin_login.html">ADMIN</a></li>
+				<li><a href="home.html">CONTACT</a></li>
+				<li><a href="reports_home.html">CASE REPORTS</a></li>
+				<li><a href="analysis_home.html">CASE ANALYSIS</a></li>
+				<li><a href="home.html">HOME</a></li>
+			</ul>
+		</div>
+	</div>
+
+	</div>
+	</body>
+	</html>

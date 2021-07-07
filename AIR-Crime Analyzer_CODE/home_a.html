@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>AIR-Crime Analyzer</title>
+    <style type="text/css">
+		@import url('https://fonts.googleapis.com/css?family=Allura|Josefin+Sans');
+
+*{
+	margin: 0;
+	padding: 0;
+	/*box-sizing: border-box;*/
+	outline: none;
+	list-style: none;
+	text-decoration: none;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+h1.title{
+	margin-bottom: 20px;
+	color: #444444;
+	font-family: 'Allura', cursive;
+	text-transform: uppercase;
+	font-size: 38px;
+	word-spacing: 25px;
+	letter-spacing: 5px;
+}
+
+p{
+	margin-bottom: 15px;
+	font-size: 20px;
+	line-height: 20px;
+	color: #e0ebeb;
+	justify-content: justify;
+}
+h5{
+	margin-bottom: 15px;
+	font-size: 14px;
+	line-height: 20px;
+	color: #5c8a8a;
+	justify-content: justify;
+}
+
+.btn a {
+    width: 180px;
+    height: 35px;
+    line-height: 35px;
+    border: 2px solid #fb2274;
+    color: #fb2274;
+    display: block;
+    margin: 25px auto 0;
+    text-align: center;
+}
+
+.main_container{
+	position: relative;
+}
+
+
+/* Navigation Bar */
+.navbar{
+	width: 100%;
+	height: 65px;
+	position: absolute;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.logo a{
+	font-family: 'Allura', cursive;
+	font-size: 36px;
+	color: #80ffff;
+}
+
+.navbar_items ul{
+	display: flex;
+}
+
+.navbar_items ul li{
+	margin: 0 10px;
+}
+
+.navbar_items ul li a{
+	text-transform: uppercase;
+	color: #fff;
+}
+
+
+/* banner_image */
+/*.banner_image{
+    height: 100%;
+    width: 100%;
+    background-image:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url('images/police-2.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}*/
+.banner_image{
+	/*background: url('images/police-2.jpg') no-repeat top center;*/
+	background-image:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url("https://online.wlu.ca/sites/default/files/styles/blogfeature_large/public/field/image/WLU%20blog%209.11%20%28003%29.jpg?itok=2fGqKRru");
+	background-size: cover;
+	width: 100%;
+	height: 700px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.banner_content{
+	text-align: center;
+	color: #fff;
+}
+
+.banner_content h1{
+	text-transform: uppercase;
+	line-height: 38px;
+	margin-bottom: 15px;
+}
+
+.banner_content h1 span{
+	color: #ffff00;
+}
+
+
+/* About */
+.about,
+.services,
+.contactus,
+.ourteam{
+	text-align: center;
+	padding: 5% 10%;
+}
+
+/* Services */
+.services{
+	background-color: #c6d9ec;
+}
+
+.diff_services {
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.diff_services .diff_services_item {
+    width: 30%;
+}
+
+.diff_services .diff_services_item img {
+    width: 100%;
+    margin-bottom: 25px;
+  transition: all 0.5s ease;
+}
+.diff_services .diff_services_item img:hover {
+transform: scale(1.1);
+}
+.diff_services .diff_services_item h2 {
+    color: #00004d;
+    margin-bottom: 15px;
+}
+.diff_services .diff_services_item p{
+    color: #00264d;
+    margin-bottom: 15px;
+    justify-content: center;
+}
+/* Contact us */
+.form_wrapper .form_input{
+	margin-bottom: 15px;
+}
+
+.form_wrapper .form_input input[type="text"]{
+	width: 250px;
+	padding: 12px 20px; 
+	border: 1px solid #ccc;
+}
+
+.form_wrapper .form_input textarea{
+	width: 250px;
+	padding: 12px 20px; 
+	height: 80px;
+	resize: none;
+	border: 1px solid  #ccc;
+}
+/* our team */
+/*.ourteam{
+	background: #f5f5f5;
+}
+
+.ourteam_wrapper{
+	display: flex;
+	flex-direction: column;
+}
+
+.ourteam_wrapper .team{
+	display: flex;
+	justify-content: space-between;
+}
+
+.ourteam_wrapper .team-1.team{
+	margin-bottom: 25px;
+}
+
+.ourteam_wrapper .team_members{
+	width: 30%;
+	height: auto;
+	cursor: pointer;
+	overflow: hidden;
+	position: relative;
+}
+
+.ourteam_wrapper .team_members img{
+	display: block;
+	width: 100%;
+	height: auto;
+	transition: all 0.5s ease;
+}
+
+.ourteam_wrapper .team_members:hover img{
+	transform: scale(1.1);
+}
+*/
+/* footer */
+.footer{
+	width: 100%;
+	text-align: center;
+	background: #444444;
+	padding: 20px 0;
+}
+
+.footer a{
+	color: #fff;
+}
+
+
+
+@media (max-width: 720px){
+
+	.navbar{
+		height: auto;
+		flex-direction: column;
+	}
+
+	.logo{
+		margin-bottom: 25px;
+	}
+
+	.navbar_items ul{
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.navbar_items ul li{
+		margin-bottom:5px;
+	}
+
+	.banner_content{
+		margin-top: 35px;
+	}
+
+}
+
+
+/* arrow */
+.arrow{
+	position: fixed;
+	bottom: 25px;
+	right: 25px;
+	width: 40px;
+	height: 40px;
+	line-height: 50px;
+	text-align: center;
+	cursor: pointer;
+	background: #fb2274;
+	border-radius: 50%;
+	display: none;
+}
+
+.arrow img{
+	width: 20px;
+	height: 20px;
+	z-index: 1;
+}
+	</style>
+</head>
+<body>
+
+<div class="main_container" id="home">
+	
+	<div class="navbar">
+		<div class="logo">
+			<a href="#">AIR>> Crime Analyzer</a>
+		</div>
+		<div class="navbar_items">
+			<ul><li><a href="#">HOME</a></li>
+				<li><a href="#about">VIEW MESSAGES</a></li>
+				<li><a href="admin_desk.html">ADMIN DESK</a></li>
+				<li><a href="admin_login.html">LOGOUT</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="banner_image">
+		<div class="banner_content">
+			<h1>KEEPING OUR COUNTRY SAFE &<br> <span>SECURE THROUGH DATA<span></h1>
+			<p>Indian Crime Data Analysis. A detail analysis and visualization of the crimes committed.</p>
+		</div>	
+	</div>
+
+	<div class="about" id="about">
+		<h1 class="title">VIEW MESSAGES</h1>
+		<h5>
+<b><u>Message 1: Data Generates Research and Decision Making:</u></b><br><br>
+The report is the only, and most comprehensive, databank available with the Government of India on the subject. The data contained in the report is used by policy makers, NGOs, researchers and public at large. Keeping in view the extensive, and increasing, dependence of various stakeholders on the information contained in the report, we have, on our own initiative, digitised all the editions of the report from 1953 to 2019 and made them available on our website. Besides, historical data in open source formats are also made available on Open Government Data (OGD).<br><br><br>
+
+<b><u>Message 2: Suggestions and Innovations:</u></b><br><br>
+While our achievements make us proud, they do not make us complacent. The presentation of the report has also been improved over the years. Thus, a good number of graphs and maps have been included in the report recently. We are open to improving the content and presentation of the report to make it more useful to the stakeholders. We welcome any suggestion(s) from users who may like to help us in our quest for excellence.<br><br><br>
+
+<b><u>Message 3: Salient Fields:</u></b><br><br>
+The report contains statistical information on cognizable crimes as reported in police stations during the reference year. Information on police casualties and police firing, police & civilians casualties is given in separate chapters to ensure adequate focus to these issues. Information on complaints against police personnel and custodial crimes has also been given in separate chapters. It has been our constant endeavour to improve the scope, coverage, content and presentation of the publication. In this connection, the Bureau has started publication of dedicated chapters on cyber crimes, human trafficking, crime against senior citizens, crime against foreigners inter-alia foreign tourists, offences against the State, environment related offences and seizures of arms & drugs by police. Besides, data on economic crimes, recidivism and crime in railways has also been given in separate chapters. Information on kidnapping and abduction is presented in respect of total population, women & girls and children separately. The latest edition has a total of 25 chapters.</h5>
+	</div>
+	<div class="services" id="services">
+		<h1 class="title">Services</h1>
+		<p></p>
+		<div class="diff_services">
+			<div class="diff_services_item">
+				<img src="data_m2.jpg">
+				<h2 class="sub_title">Data Mining</h2>
+				<p>Officers can view all the latest case Updates and add any available current cases to keep updating the registry using Data Mining Techniques.</p>
+			</div>
+			<div class="diff_services_item">
+				<img src="data_a1.jpg">
+				<h2 class="sub_title">Data Analysis</h2>
+				<p>Officers can make use of Machine learning algorithm for data analysis to make accurate predictions that can very much help them to solve cases.</p>
+			</div>
+			<div class="diff_services_item">
+				<img src="data_v.jpg">
+				<h2 class="sub_title">Data Visualizations</h2>
+				<p>Officers can view interactive plots and visualizations to help them understand the crimes and take actions accordingly.</p>
+			</div>
+			
+		</div>
+	</div>
+
+	<div class="contactus" id="contactus">
+		<h1 class="title">Service Megssages</h1>
+		<div class="form_wrapper">
+			<div class="form_input">
+				<input type="text" placeholder="Email">
+			</div>
+			<div class="form_input">
+				<input type="text" placeholder="Subject">
+			</div>
+			<div class="form_input">
+				<textarea placeholder="Message"></textarea>
+			</div>
+			<div class="btn">
+				<a href="#">Submit</a>
+			</div>
+		</div>
+	</div>
+
+<div class="footer">
+		<a href="#">© Anwesha-Ishika-Rohan 2021</a>
+	</div>
+
+
+	<div class="arrow">
+		<a href="#home"><img src="images/arrow.png" alt="up_arrow"></a>
+	</div>
+</div>	
+	
+</body>
+</html>
