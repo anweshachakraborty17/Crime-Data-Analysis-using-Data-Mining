@@ -3,4 +3,4 @@ AIR Crime Analyzer is a Crime Data Analysis Project using Data Mining Technics. 
 
 Instruction to run this applcation:
 --------------------------------------
-Just double click on run the "index.html" to run this application.
+Just double click or run the "index.html" to run this application.
